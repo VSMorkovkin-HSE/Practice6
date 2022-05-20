@@ -131,6 +131,7 @@ public class Elevator {
 
                     currentWeight += p.weight;
                     floorPersonOut.get(p.toFloor - 1).add(p);
+                    floorNeedStop[p.toFloor - 1] = true;
 
                     floorPersonIn.get(currentFloor).poll();
                 }
